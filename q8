@@ -1,0 +1,26 @@
+model = []
+cons = []
+listl = []
+listval = []
+
+for i in range(1,6):
+  print('VEICULO',i)
+  veic = input('NOME:')
+  km = float(input('KM POR LITRO:'))
+  model.append(veic)
+  cons.append(km)
+
+  litros = 1000 / km
+  listl.append(round(litros))
+
+  valor = litros * 2.25
+  listval.append(round(valor))
+
+  model = sorted(model)
+  cons = sorted(cons)
+
+print('RELATÓRIO FINAL:')
+
+
+for c in range(5):
+  print((c+1),'-',model[c],'-',cons[c],'-',listl[c],'litros','-  R$',listval[c])
