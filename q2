@@ -1,0 +1,36 @@
+listlanc = []
+c = 9999
+lanches = ['Cachorro quente','Bauru Simples','Bauru com Ovo','Hamburguer','X-Burguer','Refrigerante']
+valf = 0
+
+for i in range (c):
+  ped = str(input('Faça o seu pedido:\n Cachorro quente = 1,20R$ (COD = 100) \n Bauru simples = 1,30R$ (COD = 101)\n Bauru com Ovo = 1,50R$ (COD = 102)\n Hamburguer = 1,20R$ (COD = 103)\n X-Burguer = 1,30R$ (COD = 104)\n REFRIGERANTE = 1,00R$ (COD = 105)\n DIGITE (x) PARA ENCERRAR O PEDIDO.'))
+  
+  if ped == 'x':
+    break
+  
+  if ped == '100':
+    listlanc.append(lanches[0])
+    valf = (valf + 1.2)
+
+  if ped == '101':
+    listlanc.append(lanches[1])
+    valf = (valf + 1.3)
+
+  if ped == '102':
+    listlanc.append(lanches[2])
+    valf = (valf + 1.5)
+
+  if ped == '103':
+    listlanc.append(lanches[3])
+    valf = (valf + 1.2)
+
+  if ped == '104':
+    listlanc.append(lanches[4])
+    valf = valf + 1.3
+
+  if ped == '105':
+    listlanc.append(lanches[5])
+    valf = valf + 1
+
+print('O seu pedido foi', listlanc,'\nvalor total de:',valf,'R$.')
