@@ -1,0 +1,51 @@
+n = 9999999
+
+listcand = []
+
+tot1 = 0
+tot2 = 0
+tot3 = 0
+tot4 = 0
+tot5 = 0
+tot6 = 0
+
+for i in range (n):
+  n = int(input('Voce votará em quem?\n AMANDA ( vote 1 )\n BEL ( vote 2 )\n CARLOS ( vote 3 )\n DANIEL ( vote 4 )\n PARA VOTAR NULO ( DIGITE 5)\n PARA VOTAR EM BRANCO ( DIGITE 6 )\n O PROGRAMA ENCERRARÁ QUANDO FOR DIGITADO ( 0 )'))
+
+  if n == 0:
+    break
+
+  listcand.append(i)
+
+  if n == 1:
+    listcand.append('AMANDA ||')
+    tot1 += 1
+
+  if n == 2:
+    listcand.append('BEL ||')
+    tot2 += 1
+
+  if n == 3:
+    listcand.append('Carlos ||')
+    tot3 += 1
+
+  if n == 4:
+    listcand.append('Daniel ||')
+    tot4 += 1
+
+  if n == 5:
+    listcand.append('VOTO NULO ||')
+    tot5 += 1
+
+  if n == 6:
+    listcand.append('VOTO EM BRANCO ||')
+    tot6 += 1
+
+print(listcand)
+print('total de votos para (AMANDA):',tot1)
+print('total de votos para (BEL):',tot2)
+print('total de votos para (CARLOS):',tot3)
+print('total de votos para (DANIEL):',tot4)
+print('total de votos NULOS',tot5)
+print('total de votos EM BRANCO',tot6)
+print('Houve',((tot5 * 100)/i),'% de votos nulos. e',((tot6 * 100)/i),'% de votos em branco.')
