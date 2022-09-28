@@ -1,0 +1,30 @@
+n = 200
+c1 = 0
+c2 = 0
+c3 = 0
+c4 = 0
+
+for i in range(n):
+  sit = int(input('Situação:\n(1) = Necessita da esfera \n(2) = Necessita de limpeza \n(3) = Necessita a troca do cabo ou conector\n (4) = quebrado ou inutilizado\n DIGITE (0) PARA ENCERRAR O PROGRAMA.\n'))
+  
+  if sit == 0:
+    break
+
+  if sit == 1:
+    c1 += 1
+  
+  if sit == 2:
+    c2 += 1
+
+  if sit == 3:
+    c3 += 1
+
+  if sit == 4:
+    c4 += 1
+
+print('quantidade de mouses:',i)
+print('situação                quantidade        percentual.')
+print('1 - Necessita da esfera     ',c1,'          ',(c1 / i)*100,'%')
+print('2 - Necessita de limpeza     ',c2,'          ',(c2 / i)*100,'%')
+print('3 - Necessita troca de cabo ou conector',c3,'     ',(c3 / i)*100,'%')
+print('4 - Quebado ou inutilizado     ',c4,'          ',(c4 / i)*100,'%')
