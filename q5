@@ -1,0 +1,18 @@
+nom = input('Atleta:')
+salt = []
+ordem = ['primeiro salto:','segundo salto:','terceiro salto:','quarto salto:','quinto salto:']
+for i in range(5):
+  print(ordem[i], end=' ')
+  dist = float(input(''))
+  salt.append(dist)
+  salt = sorted(salt)
+
+print('melhor salto:',salt[4],'m')
+print('pior salto:',salt[0],'m')
+
+salt.pop(0)
+salt.pop(3)
+med = sum(salt) / 3
+
+print('média dos demais saltos:',med,'m')
+print('resultado final:\n',nom,':',med,'m')
