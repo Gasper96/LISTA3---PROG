@@ -1,0 +1,30 @@
+cont = 999999
+abonomin = 0
+abonmax = 0
+trab = 0
+abonof = 0
+
+for i in range(cont):
+  cont = int(input('SALÁRIO:'))
+  salf = cont * 1.2
+  abono = salf - cont
+  trab += 1
+  abonof = abono + abonof
+  
+  if cont == 0:
+    break
+
+  if abono <= 100:
+    salf = cont + 100
+    abonomin += 1
+  
+  if abono > abonmax:
+    abonmax = abono
+
+  print('SALÁRIO','     ','ABONO')
+  print(cont,'-R$      ',abono)
+
+print('FORAM PROCESSADOS',i,'COLABORADORES.')
+print('O TOTAL GASTO COM ABONOS:  R$',abonof)
+print('VALOR MINIMO PAGO A',abonomin,'COLABORADORES.')
+print('MAIOR VALOR DE ABONO PAGO:',abonmax)
