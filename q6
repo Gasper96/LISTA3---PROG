@@ -1,0 +1,16 @@
+nom = input('Atleta:')
+nota = []
+
+for i in range(7):
+  print('Nota:', end=' ')
+  valor = float(input(''))
+  nota.append(valor)
+  nota = sorted(nota)
+
+print('resultado final:\n Atleta:',nom)
+print('melhor Nota:',nota[6])
+print('pior Nota:',nota[0])
+nota.pop(0)
+nota.pop(5)
+med = sum(nota) / 5
+print('média:',med)
