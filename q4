@@ -1,0 +1,31 @@
+esp = ['a', 'b', 'c', 'd', 'e', 'e', 'd', 'c', 'b', 'a']
+cond = 'sim'
+menor = 10
+maior = 0
+cont = 0
+somcorretas = 0
+
+while cond == 'sim':
+  listn = []
+  corretas = 0
+  cont += 1
+  for i in range(10):
+    print('Questão', (i+1), end=' ')
+    n = input('forneça a resposta:')    
+    listn.append(n)
+
+    if resp[i] == listn[i]:
+      corretas += 1
+  
+  somcorretas = corretas + somcorretas
+
+  if corretas <= menor:
+    menor = corretas
+
+  if corretas >= maior:
+    maior = corretas
+
+  cond = input('mais alguém fará a prova? responda com ( sim ) ou ( não ):')
+
+print('a maior nota da turma foi:',maior,'.  e a menor nota foi',menor,'.')
+print('no total',cont,'alunos fizeram a prova.','a média das notas foi',(somcorretas / cont))
